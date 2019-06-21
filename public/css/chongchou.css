@@ -1,0 +1,195 @@
+﻿body{
+	background-color:#f2f2f2;
+	}
+
+a{
+	text-decoration:none;
+	color:#505050;
+	font-size:12px;
+	}
+
+#zhongchou .zcheader{
+	width:100%;
+	overflow:hidden;
+	}
+#zhongchou .zcheader ul{
+	width:1200px;
+	overflow:hidden;
+	}
+#zhongchou .zcheader ul li{
+	display:block;
+	float:left;
+	width:320px;
+	height:170px;
+	}
+#zhongchou .zcheader ul li a{
+	display:block;
+	width:100%;
+	}
+#zhongchou .zcheader ul li a img{
+	display:block;
+	width:100%;
+	height:auto;
+	}
+.zhongchou-top {
+    display: inline-block;
+    width: 100%;
+	margin-top:2px;
+}
+.zhongchou-top-t{
+	height: 35px;
+	border-bottom: solid 1px #f2f2f2;
+	}
+.zhongchou-top-t h3{
+	line-height:44px;
+	padding-left:10px;
+	color:#505050;
+	}
+.zhongchou-top-t-span1{
+	display:block;
+	float:right;
+	}
+.zhongchou-icon{
+	display:block;
+	float:left;
+	background-image:url(../images/zhongchou/icon-remain.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:cover;
+	width:14px;
+	height:14px;
+    margin-top: 15px;
+	margin-right:5px;
+	}
+.zhongchou-b1{
+	display:block;
+	float:left;
+	/* color:#3399ff; */
+	color:#61be16;
+	margin-right:5px;
+	}
+.zhongchou-b4{
+	/* color:#ff005f; */
+	color:#636363;
+	display:block;
+	float:left;
+	margin-right:5px;
+	font-weight: normal;
+	}
+.zhongchou-b3{
+	color:#00d183;
+	display:block;
+	float:left;
+	margin-right:5px;
+	font-weight: normal;
+	}
+.zhongchou-b1, .zhongchou-b2{
+	font-weight:normal;
+	}
+.zhongchou-b2{
+	margin-right:5px;
+	color:#505050;
+	}
+.zhongchou-top-center{
+	padding:0 10px 10px 10px;
+    display: inline-block;
+	width:93.7%;
+	position:relative;
+	}
+.zhongchou-top-center ul li{
+	display:inline-block;
+	width:100%;
+	height:auto;
+	}
+.zhongchou-tiop-center-span1{
+	display:block;
+	float:left;
+	width:42%; 
+    height: 78px;  
+    /* height: 126px;   */
+	margin-right:10px;
+	}
+.zhongchou-tiop-center-span1 img{
+	display:block;
+	width:100%; 	
+	height:100%;
+	/*padding-left: 20%;*/
+	}
+.zhongchou-p1{
+	color:#666;
+	}
+.zhongchou-p2{
+		padding:13px;
+		}
+.zhongchou-p3{
+
+	}
+.zhongchou-top-center-icon1{
+	display:block;
+	float:left;
+	background:url(../images/zhongchou/icon-index.png) no-repeat 0 80%;
+	background-size:cover;
+	width:16px;
+	height:16px;
+	}
+.zhongchou-top-center-icon2{
+    display: block;
+    float: left;
+    background: url(../images/zhongchou/icon-index.png) no-repeat 0 100%;
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+	}
+span.zhongchou-top-center-sapn3 {
+    display: block;
+    float: left;
+    margin-top: 8px;
+    margin-left: 1px;
+    color: #909090;
+    line-height: 16px;
+	clear:both;
+}
+span.zhongchou-top-center-span4 {
+    display: block;
+    float: right;
+    margin-top: 8px;
+	color:#909090;
+    line-height: 16px;
+}
+.zhongchou-top-c-c{
+	height:2px;
+	background-color:#e6e5e1;
+    margin-top: 12px;
+    margin-bottom: 12px;
+	float:left;
+	width:65%;
+	position:relative;
+	}
+.zhongchou-c-a{
+	height:2px;
+	/* background-color:#00d183; */
+	background-color:#61be16;
+	}
+span.zhongchou-top-span1 {
+    position: absolute;
+    /* right: -48px; */
+	left:106%;
+    top: -8px;
+    /* color: #00d183; */
+    color: #61be16;
+}
+.zhomgchou-top-c-right{
+	float:right;
+    width: 54%;
+	}
+.zhongchou-top ul li{
+	display:block;
+	width:100%;
+	margin-bottom: 10px;
+	}
+.zhongchou-a{
+    display: block;
+    width: 100%;
+    background-color: #fff;
+	margin-bottom:5px;
+	}

@@ -1,0 +1,119 @@
+.h-mid h6{font-size: 16px}
+
+.shareWrap { padding: 10px 9px 10px 9px; }
+.shareWrap .shareText { height: 40px; line-height: 40px; }
+.shareWrap ul { overflow: hidden; }
+.shareWrap ul li { width: 21%; height: 38px; line-height: 30px; float: left; margin: 0 8% 3% 2%; vertical-align: top; border-radius: 5px; }
+.shareWrap ul li.two{ margin: 0% 8% 0% 15%; }
+.shareWrap ul li.touch { background: #afafae; }
+.shareWrap ul li span { display: inline-block; vertical-align: top; }
+.shareWrap ul li .text { height: 38px; display: inline-block; overflow: hidden; word-wrap: break-word; word-break: break-all; color: #999; font-size: 14px; }
+.shareWrap ul li .icon { width: 32px; height: 32px; margin: 3px 10px 0 10px; background: url(../images/z3g_icon_share.png) no-repeat; }
+.shareWrap ul li .icon2 { width: 32px; height: 32px; margin: 3px 10px 0 10px; background: url(../images/weixin.png) no-repeat; }
+.shareWrap ul li.spaceQQ .icon { background-position: 0px 0px; }
+.shareWrap ul li.weiboSina .icon { background-position: 0px -32px; }
+.shareWrap ul li.weiboQQ .icon { background-position: 0px -64px; }
+.shareWrap ul li.weiboWangyi .icon { background-position: 0px -96px; }
+.shareWrap ul li.friend .icon { background-position: 0px -128px; }
+.shareWrap ul li.haoyou .icon { background-position: 0px -160px; }
+.shareWrap ul li.renren .icon { background-position: 0px -192px; }
+.shareWrap ul li.baidu .icon { background-position: 0px -224px; }
+.shareWrap ul li.weiboSohu .icon { background-position: 0px -256px; }
+.shareWrap ul li.tianya .icon { background-position: 0px -288px; }
+.shareWrap ul li.taojianghu .icon { background-position: 0px -320px; }
+.shareWrap ul li.douban .icon { background-position: 0px -352px; }
+.shareWrap ul li.hexun .icon { background-position: 0px -384px; }
+.shareWrap ul li.gplus .icon { background-position: 0px -416px; }
+.shareWrap ul li.msn .icon { background-position: 0px -448px; }
+.shareWrap ul li.weixin .icon { background-position: 0px -544px; }
+.shareWrap ul li.weixin .icon_cut {background: url(../images/z34g_icon_share.png);width: 32px; height: 32px; margin: 3px 10px 0 10px;}
+.shareWrap ul li.kaixin001 .icon { background-position: 0px -576px; }
+.shareWrap ul li.QQ .icon { background-position: 0px -160px; }
+.shareWrap ul li.QQ1 .icon { background-position: 0px -160px; }
+.ml{
+    margin-left: -61px;
+}
+
+.fo-con .ct-list li.successtijiao { font-size: 1.6em; font-weight: bold; color: #82D067; background: url(../images/68ecshop_zc.png) no-repeat left center; text-indent: 20px }
+.fo-con .ct-list li em.price { font-size: 1.4em; font-weight: bold; color: #C00 }
+
+
+
+/* 订单详情页面的分享样式 */
+#choose_attr_share{position:fixed; bottom:0; left:0; height:0px; z-index:99999999; background:#fff; width:100%;}
+.shareWrap .share_button{
+	text-align: center;
+    padding-bottom: 0px!important;
+    height: 80px!important;
+	padding-top:10px;
+    margin-left: 2%;
+}
+.shareWrap .share_button li{
+	width: 20%!important;
+    border: 0px!important;
+    /* height: 50px!important; */
+    margin-left:4%;
+	
+}
+
+.shareWrap .share_button li i{
+	position: relative;
+    float: left;
+    color: #999;
+	font-size:14px;
+	padding-left:15%;
+}
+.shareWrap .share_button .pyq{
+	padding-left:0px;
+    width: 70px;
+}
+.shareCancel{
+	width: 100%;
+    height: 45px;
+    background: #FFF;
+    position: absolute;
+    bottom: 0px;
+}
+.shareCancel .shut{
+	display: block;
+    width: 100%;
+    height: 45px;
+    background: #6cc923;
+    text-align: center;
+    font-size: 18px;
+    line-height: 45px;
+    color: #FFF;
+}
+.share_win{
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 0px;
+    z-index: 99999999;
+    background: #fff;
+    width: 100%;
+	overflow:hidden;
+}
+.addf {
+    width: 20%;
+    border: 0px!important;
+    line-height: 45px!important;
+    height: 50px!important;
+}
+.addf i {
+    position: relative;
+    float: left;
+    margin-top: 25px;
+    margin-left: -52px;
+    color: #999;
+}
+.canshu {
+    text-align: center;
+    margin-left: 9%;
+    padding-bottom: 0px!important;
+    height: 80px!important;
+}
+.f_mask1 {
+    height: 300%;
+}
+
