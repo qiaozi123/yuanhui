@@ -470,8 +470,8 @@
 
             <ul class="price_dottm">
                 <li style=" text-align:left">折扣：{{$data->折扣}}折</li>
-                <li>1人评价</li>
-                <li style=" text-align:right">13人已购</li>images
+                {{--<li>1人评价</li>--}}
+                <li style=" text-align:right">13人已购</li>
             </ul>
         </div>
 
@@ -498,8 +498,8 @@
 
     </div>
     <div class="tabs" id="goods_tabs">
-        <li class="current"><a href="javascript:;" class="tab_head" id="goods_ka2" onclick="show_goods_desc()">详情</a></li>
-        <li><a href="javascript:;" class="tab_head" id="goods_ka3">评价</a></li>
+        {{--<li class="current" style="width: 100%"><a href="javascript:;" class="tab_head" id="goods_ka2" >详情</a></li>--}}
+        {{--<li><a href="javascript:;" class="tab_head" id="goods_ka3">评价</a></li>--}}
     </div>
     <script>
         $(document).ready(function(){
@@ -524,18 +524,19 @@
     </script>
     <div class="main" id="user_goods_ka_2" style="display:block">
         <div class="product_main">
-            <div class="product_images product_desc" id="product_desc"><p style="text-align: center">
-                    <img src="{{url('images')}}/1489028745543804.jpg" style="" alt="新奇士美国脐橙 12个装多少钱"></p><p style="text-align: center">
-                    <img src="{{url('images')}}/1489028745195749.jpg" style="" alt="哪里买新奇士美国脐橙 12个装"></p><p style="text-align: center">
-                    <img src="{{url('images')}}/1489028745995347.jpg" style="" alt="新奇士美国脐橙 12个装怎么样"></p><p><br></p></div>
+            <div class="product_images product_desc" id="product_desc">
+                @foreach($goodimg as $item)
+                <p style="text-align: center"><img src="{{$item->商品图片地址}}" style="" alt=""></p><p style="text-align: center">
+                @endforeach
+            </div>
         </div>
     </div>
     <div class="tab_attrs tab_item hide" id="user_goods_ka_3" style="display: none;">
-        <script type="text/javascript" src="{{url('js')}}/utils.js"></script><div id="ECS_COMMENT">
+        <script type="text/javascript" src="{{url('js')}}/utils.js"></script>
+        <div id="ECS_COMMENT">
             <link href="{{url('css')}}/photoswipe.css" rel="stylesheet" type="text/css">
             <script src="{{url('js')}}/klass.min.js"></script>
             <script src="{{url('js')}}/photoswipe.js"></script>
-
             <div class="my-comment-tab commnet_rank">
                 <ul>
                     <!--
@@ -627,15 +628,7 @@
             }
         }
         /**/
-        function  show_goods_desc(){
-            document.getElementById('product_desc').innerHTML = '<p style="text-align: center"><img src="http://www.shikefood.com/includes/ueditor/php/../../../bdimages/upload1/20170309/1489028745543804.jpg" style="" title="SK02080085main_01.jpg"/></p><p style="text-align: center"><img src="http://www.shikefood.com/includes/ueditor/php/../../../bdimages/upload1/20170309/1489028745195749.jpg" style="" title="SK02080085main_02.jpg"/></p><p style="text-align: center"><img src="http://www.shikefood.com/includes/ueditor/php/../../../bdimages/upload1/20170309/1489028745995347.jpg" style="" title="SK02080085main_03.jpg"/></p><p><br/></p>';
-            var altGoodArr = ["新奇士美国脐橙 12个装多少钱", "哪里买新奇士美国脐橙 12个装", "新奇士美国脐橙 12个装怎么样", "在线新奇士美国脐橙 12个装", "优质新奇士美国脐橙 12个装", "优质新奇士美国脐橙 12个装", "新鲜新奇士美国脐橙 12个装", "购买新奇士美国脐橙 12个装", "新奇士美国脐橙 12个装优惠", "上海哪里买新奇士美国脐橙 12个装"] ;
-            var altImg = document.getElementById("product_desc").getElementsByTagName("img");
-            for (var i = 0; i < altImg.length; i++) {
-                altImg[i].setAttribute("alt",altGoodArr[i]);
-                altImg[i].removeAttribute("title")
-            }
-        }
+
         /**
          * 点选可选属性或改变数量时修改商品价格的函数
          */
@@ -865,6 +858,7 @@
                         <span class="ui-number">
           <button type="button" class="decrease" onclick="goods_cut();changePrice();"></button>
           <input type="number" class="num" id="number" onblur="changePrice();" name="number" value="1" min="1" style=" text-align:center">
+          <input type="text" style="display: none" id="goods_id" name="goods_id" value="{{$data->id}}" min="1" style=" text-align:center">
           <button type="button" class="increase" onclick="goods_add();changePrice();"></button>
           </span>
                     </div>
@@ -873,7 +867,21 @@
             </ul>
         </div>
         <div class="f_foot">
-            <input type="submit" border="0" class="add_gift_attr" value="提交">
+            <input type="button" border="0" class="add_gift_attr" value="提交" onclick="addcart()">
+            <script>
+                function addcart() {
+                   number = $("#number").val();
+                   goodsid = $("#goods_id").val();
+                   alert(goodsid)
+                    $.ajax({
+                        type: "POST",
+                        url: "/cart/add",
+                        data: {"_token":{{csrf_token()}},'count':number,'goodsid':goodsid},
+                    }).done(function( msg ) {
+                        alert( "Data Saved: " + msg );
+                    });
+                }
+            </script>
             <div style=" height:30px"></div>
         </div></section>
     <script>
@@ -1068,24 +1076,8 @@
 </script>
 <div style=" height:55px;"></div>
 <div class="footer_nav toolbar">
-    <ul>
-        <li class="bian" style="width:33%">
-            <a href="http://www.shikefood.com/mobile/index.php"><em class="goods_nav1"></em><span>首页</span></a> </li>
-        <!--<li class="bian" style="width:25%">-->
-        <!--<a href="javascript:go_to_msgrd();">-->
-        <!--<em class="goods_nav2"></em><span>客服</span></a> -->
-        <!--</li>-->
-        <li class="bian" style="width:33%">
-            <a href="http://www.shikefood.com/mobile/flow.php" class="cartTool">
-                <em class="goods_nav4"></em>
-                <i class="global-nav__nav-shop-cart-num" id="ECS_CARTINFO"> 0 </i>
-                <span>购物车</span>
-            </a>
-        </li>
-        <li style="width:34%"><a href="javascript:collect(10079)" id="favorite_add"><em class="goods_nav3"></em><span>收藏</span></a></li>
-    </ul>
-    <dl>
-        <dd class="flow" id="ECS_ADD_TO_CART"><a class="button active_button" onclick="choose_attr(0)">加入购物车</a> </dd>
+    <dl style="width: 100%">
+        <dd class="flow" id="ECS_ADD_TO_CART"><a class="button active_button" href="{{$data->淘宝地址}}">立即购买</a> </dd>
         <!--<dd class="goumai" id="ECS_ONE_STEP_BUY"><a style="display:block;" onClick="choose_attr(1)">立即购买</a> </dd>-->
         <span class="daohuo" id="ECS_DAOHUO"> <a onclick="tell_me(10079)">到货通知</a></span>
     </dl>

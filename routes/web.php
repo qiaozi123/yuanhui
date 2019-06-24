@@ -38,5 +38,7 @@ Route::group([ 'namespace' => 'M',], function () {
     Route::get('user/help', 'UserController@help'); //帮助中心
     Route::get('user/address', 'UserController@address'); //地址页面
     Route::get('user/qiandao', 'UserController@qiandao'); //签到页面
+
+    //
 });
 

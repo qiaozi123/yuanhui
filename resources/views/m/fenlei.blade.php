@@ -90,17 +90,13 @@
 <div class="footer_nav">
     <div class="footer-menu">
         <ul style="width: 75%;">
-            <li><a href="http://www.shikefood.com/mobile/"><i class="menuicon menuicon1"></i>
-                    <p>首页</p></a></li>
-            <li class="current"><a href="http://www.shikefood.com/mobile/catalog.php"><i class="menuicon menuicon2"></i>
-                    <p>分类</p></a></li>
-            <li><a href="http://www.shikefood.com/mobile/searchindex.php"><i class="menuicon menuicon3"></i>
-                    <p>搜索</p></a></li>
-            <li><a href="http://www.shikefood.com/mobile/user.php"><i class="menuicon menuicon4"></i>
-                    <p>个人中心</p></a></li>
+            <li><a href="/"><i class="menuicon menuicon1"></i><p>首页</p></a></li>
+            <li  class="current"><a href="/fenlei"><i class="menuicon menuicon2"></i><p>分类</p></a></li>
+            <li><a href="/search"><i class="menuicon menuicon3"></i><p>搜索</p></a></li>
+            <li><a href="/user"><i class="menuicon menuicon4"></i><p>个人中心</p></a></li>
         </ul>
         <div class="shopcart">
-            <a href="http://www.shikefood.com/mobile/flow.php?filter=activity">
+            <a href="">
                 <span class="count global-nav__nav-shop-cart-num" id="ECS_CARTINFO"> 0 </span>
             </a>
         </div>
