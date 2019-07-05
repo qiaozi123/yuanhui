@@ -5,6 +5,7 @@ namespace App\Http\Controllers\M;
 use App\Model\Lunbo;
 use App\Model\Product;
 use App\Model\ProductImages;
+use App\Model\ProductItem;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -17,7 +18,8 @@ class GoodController extends Controller
         }
         $data = Product::find($id);
         $goodimg = ProductImages::where(['商品id'=>$id])->get();
-        return view('m.good',compact('data','goodimg'));
+        $productdata = ProductItem::where(['product_id'=>$id])->get();
+        return view('m.good',compact('data','goodimg','productdata'));
     }
 
     public function fenlei()

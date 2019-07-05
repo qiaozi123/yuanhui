@@ -416,9 +416,14 @@
 
         <div class="banner">
             <div id="slider" class="slider" style="overflow: hidden; visibility: visible; list-style: none; position: relative;">
+
                 <ul id="sliderlist" class="sliderlist" style="position: relative; overflow: hidden; transition: left 0ms ease 0s; width: 375px; left: 0px;">
-                    <li style="float: left; display: block; width: 375px;"><span><a href="http://www.shikefood.com/mobile/goods.php?id=10079#"><img title="" width="100%" src="{{$data->商品首页图片}}"></a></span></li>
+
+                    <video  controls>
+                        <source src="{{$data->视频地址}}" type="video/mp4">
+                    </video>
                 </ul>
+
                 <div id="pagenavi">
                     <a href="javascript:void(0);" class="active"></a>
                 </div>
@@ -841,16 +846,28 @@
         <div class="f_title_attr">
             <img id="ECS_GOODS_ATTR_THUMB" src="{{url('images')}}/10079_thumb_G_1497979127734.jpg" style=" float:left;">
             <div class="f_title_arr_r">
-                <span>价格：<i id="ECS_GOODS_AMOUNT_CHOOSE">¥{{$data->price}}</i></span>
-                <!-- <span>库存：<i id="ECS_GOODS_NUMBER">0</i>件</span> -->
+                <span>价格：<i id="ECS_GOODS_AMOUNT_CHOOSE">¥{{$data->价格}}</i></span>
                 <span id="ECS_GOODS_ATTR"></span>
             </div>
+            <div class="f_title_arr_r">
+                <div class="sku_choose" id="skuPop1" ptag="7001.1.5">
+                    <span class="item" no="1" dis="0" dissel="0">巴沙鱼柳（去皮） 450g</span>
+                    <span class="item" no="1" dis="0" dissel="0">巴沙鱼柳（带皮） 450g</span>
+                    <span class="item active" no="1" dis="0" dissel="0">越南巴沙鱼柳（去皮）1kg</span>
+                    <span class="item" no="1" dis="0" dissel="0">美国三文鱼块（大西洋鲑）170g</span>
+                    <span class="item" no="1" dis="0" dissel="0">格陵兰比目鱼片 500g</span>
+                    <span class="item" no="1" dis="0" dissel="0">挪威大西洋真鳕与三文鱼块</span>
+                    <span class="item" no="1" dis="0" dissel="0">新西兰长尾鳕鱼柳 400g</span>
+                    <span class="item" no="1" dis="0" dissel="0">新西兰裹粉长尾鳕鱼条 400g</span>
+                </div>
+            </div>
+
             <a class="c_close_attr" href="javascript:void(0)" onclick="close_choose_attr();"></a>
+
             <div style="height:0px; line-height:0px; clear:both;"></div>
         </div>
         <div class="f_content_attr">
             <ul class="navContent" style="display:block;">
-
                 <li style=" border-bottom:1px solid #eeeeee">
                     <div class="title1">购买数量</div>
                     <div class="item1">
@@ -1077,8 +1094,9 @@
 <div style=" height:55px;"></div>
 <div class="footer_nav toolbar">
     <dl style="width: 100%">
-        <dd class="flow" id="ECS_ADD_TO_CART"><a class="button active_button" href="{{$data->淘宝地址}}">立即购买</a> </dd>
-        <!--<dd class="goumai" id="ECS_ONE_STEP_BUY"><a style="display:block;" onClick="choose_attr(1)">立即购买</a> </dd>-->
+
+        <dd  class="goumai" id="ECS_ADD_TO_CART"><a class="button active_button" href="{{$data->淘宝地址}}">淘宝购买</a> </dd>
+        <dd  class="flow" id="ECS_ONE_STEP_BUY"><a style="display:block;" onClick="choose_attr(1)">立即购买</a> </dd>
         <span class="daohuo" id="ECS_DAOHUO"> <a onclick="tell_me(10079)">到货通知</a></span>
     </dl>
 </div>

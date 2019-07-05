@@ -217,7 +217,7 @@
 
 
 .footer_nav dl{ width:40%; float:left; height:50px;}
-.footer_nav dl dd{ width:100%; float:left; height:51px;text-align:center; margin-top:-1px;}
+.footer_nav dl dd{ width:50%; float:left; height:51px;text-align:center; margin-top:-1px;}
 .footer_nav dl dd a{ font-size:16px; line-height:51px; color:#FFF }
 .footer_nav dl .flow{ background:#6cc923}
 .footer_nav dl .goumai{ background:#dd2726}
@@ -475,4 +475,28 @@
 }
 #goods_tabs li.current a{
 	color:#6cc923;
+}
+
+.sku_choose .item{
+    display: inline-block;
+    padding: 0 10px;
+    min-width: 20px;
+    max-width: 270px;
+    overflow: hidden;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    text-align: center;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    color: #333;
+    background-color: #f7f7f7;
+    font-size: 14px;
+}
+
+ .sku_choose .item.active{
+    background: -webkit-linear-gradient(131deg,#ff4f18,#ff2000 24%,#f10000);
+    background: linear-gradient(-41deg,#ff4f18,#ff2000 24%,#f10000);
+    color: #fff;
 }
